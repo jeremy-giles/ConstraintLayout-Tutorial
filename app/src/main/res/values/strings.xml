@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ConstraintLayoutTutorial</string>
+    <string name="cloud_left">cloud_left</string>
+    <string name="cloud_right">cloud_right</string>
+</resources>

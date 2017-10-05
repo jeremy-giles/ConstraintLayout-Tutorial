@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_mountain"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/iv_ground_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_player"
+        app:layout_constraintStart_toEndOf="@+id/iv_ground_1"
+        app:srcCompat="@drawable/tile_green_05" />
+
+    <ImageView
+        android:id="@+id/iv_ground_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_ground_2"
+        app:layout_constraintStart_toEndOf="@+id/iv_ground_2"
+        app:srcCompat="@drawable/tile_green_05" />
+
+    <ImageView
+        android:id="@+id/iv_ground_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/tile_green_05" />
+
+    <ImageView
+        android:id="@+id/iv_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/barrier_box_top"
+        app:layout_constraintEnd_toEndOf="@+id/barrier_box_right"
+        app:srcCompat="@drawable/block_red_key" />
+
+    <ImageView
+        android:id="@+id/iv_player"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@+id/iv_ground_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/adventurer_idle" />
+
+    <ImageView
+        android:id="@+id/iv_ground_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_ground_3"
+        app:layout_constraintStart_toEndOf="@+id/iv_ground_3"
+        app:srcCompat="@drawable/tile_green_05" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier_box_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="iv_ground_3,iv_ground_2,iv_ground_4,iv_ground_1,iv_ground_5" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier_box_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="iv_ground_3,iv_ground_2,iv_ground_4,iv_ground_1,iv_ground_5" />
+
+</android.support.constraint.ConstraintLayout>
